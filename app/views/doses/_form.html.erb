@@ -1,6 +1,6 @@
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.error_notification %>
-  <%= f.input :description, label: 'type instruction' %>
+  <%= f.input :description, label: 'type instruction', checked_value: true %>
   <%= f.association :ingredient %>
   <%= f.button :submit, class: "btn btn-primary"%>
 <% end %>
