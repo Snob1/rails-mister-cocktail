@@ -1,6 +1,8 @@
-<%= simple_form_for [@cocktail, @dose] do |f| %>
+<%= simple_form_for [@cocktail,@dose] do |f| %>
   <%= f.error_notification %>
-  <%= f.input :description, label: 'type instruction', checked_value: true %>
+  <%= f.input :description, label: 'type instruction', input_html: {value: f.object.description || "1"} %>
   <%= f.association :ingredient %>
   <%= f.button :submit, class: "btn btn-primary"%>
 <% end %>
+
+# this is optional for fun. I wanna set value as default
